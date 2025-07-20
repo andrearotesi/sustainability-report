@@ -1,0 +1,31 @@
+<div class="scroll-container" #scrollContainer>
+  <div class="items-container">
+    @for (item of items(); track $index) {
+      <div class="gallery-item-container">
+        <img class="gallery-item mobile" [class.caption]="item.caption" [src]="item.mobileImageSrc" [alt]="item.alt" />
+        <img class="gallery-item desktop" [class.caption]="item.caption" [src]="item.desktopImageSrc" [alt]="item.alt" />
+
+        @if (item.caption; as caption) {
+          <div class="caption-container">
+            <strong>{{ caption.title }}</strong>
+            <span>{{ caption.body }}</span>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>
+
+<div class="actions-container">
+  @for (action of scrollActions; track $index) {
+    <button
+      aria-label="Scroll carousel items"
+      class="pr-icon-button"
+      title="Scroll carousel items"
+      type="button"
+      (click)="scrollItems(action.direction)"
+    >
+      <fa-icon [icon]="action.icon" />
+    </button>
+  }
+</div>

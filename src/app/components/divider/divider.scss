@@ -1,0 +1,7 @@
+@use 'borders';
+@use 'colors';
+
+:host {
+  width: 100%;
+  border-top: borders.$width-default solid colors.$medium-grey;
+}

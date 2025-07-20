@@ -1,0 +1,23 @@
+<video
+  #videoRef
+  (click)="toggleVideo()"
+  (keydown.enter)="toggleVideo()"
+  [src]="src()"
+  autoplay
+  muted
+  loop
+  type="video/mp4"
+  aria-label="Video"
+  title="Video"
+  playsInline
+></video>
+
+<button
+  aria-label="Play/pause video"
+  class="pr-icon-button"
+  title="Play/pause video"
+  type="button"
+  (click)="toggleVideo()"
+>
+  <fa-icon [icon]="toggleIcon()" />
+</button>

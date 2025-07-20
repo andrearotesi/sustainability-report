@@ -1,0 +1,18 @@
+@use 'sass:color';
+
+$bg: #f1f1ef;
+
+$wine: #a32234;
+$wine-hover: color.scale($wine, $lightness: 5%);
+$wine-active: color.adjust($wine, $lightness: -5%);
+$cherry: #770316;
+
+$grey: #e8e8ed;
+$grey-hover: color.adjust($grey, $lightness: -2%);
+$grey-active: color.adjust($grey, $lightness: -5%);
+
+$medium-grey: #b0b0b0;
+$dark-grey: #55524b;
+$outline: #171717;
+
+$primary-gradient: linear-gradient(180deg, #a32234, #e10028);

@@ -1,0 +1,112 @@
+@use 'borders';
+@use 'fonts';
+@use 'sizes';
+@use 'spaces';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: spaces.$gap-medium;
+  overflow: hidden;
+
+  .scroll-container {
+    display: grid;
+    overflow-x: scroll;
+    scroll-padding: spaces.$padding-medium;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    .items-container {
+      align-items: stretch;
+      display: flex;
+      gap: spaces.$gap-medium;
+      margin: 0;
+      padding: 0 spaces.$padding-medium;
+      width: fit-content;
+
+      .gallery-item-container {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: spaces.$gap-medium;
+        width: sizes.$card-width-mobile;
+        scroll-snap-align: start;
+
+        .gallery-item {
+          height: sizes.$card-height-mobile;
+          width: sizes.$card-width-mobile;
+          object-fit: contain;
+          list-style: none;
+          border-radius: borders.$radius-default;
+
+          &.mobile {
+            display: block;
+          }
+
+          &.desktop {
+            display: none;
+          }
+
+          &.caption {
+            height: sizes.$card-caption-height-mobile;
+            object-fit: cover;
+          }
+        }
+
+        .caption-container {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            font: fonts.$body-small-mobile;
+          }
+        }
+      }
+    }
+  }
+
+  .actions-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 spaces.$padding-medium;
+    gap: spaces.$gap-small;
+  }
+}
+
+// Large screens
+@media (min-width: spaces.$desktop-bp) {
+  :host {
+    .scroll-container {
+      .items-container {
+        .gallery-item-container {
+          width: sizes.$card-width-desktop;
+
+          .gallery-item {
+            height: sizes.$card-height-desktop;
+            width: sizes.$card-width-desktop;
+
+            &.mobile {
+              display: none;
+            }
+
+            &.desktop {
+              display: block;
+            }
+
+            &.caption {
+              height: sizes.$card-caption-height-desktop;
+              object-fit: cover;
+            }
+          }
+
+          .caption-container {
+            span {
+              font: fonts.$body-small-desktop;
+            }
+          }
+        }
+      }
+    }
+  }
+}

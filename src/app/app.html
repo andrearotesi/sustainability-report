@@ -1,0 +1,54 @@
+<section>
+  <div class="heading main">
+    <h1><span class="gradient buzzword">Leonardo</span> per il futuro.</h1>
+    <h2>Report sostenibilità {{ reportYear }}</h2>
+  </div>
+
+  <div class="centered">
+    <sr-video src="videos/short.mp4" />
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="heading">
+    <h1>Highlights del {{ reportYear }}</h1>
+  </div>
+
+  <sr-gallery [items]="reportItems"/>
+</section>
+
+<sr-divider />
+
+<section class="gallery-section">
+  <div class="heading">
+    <h1 class="gradient buzzword">Leonardo S.p.a.</h1>
+    <strong>Aree di business</strong>
+  </div>
+
+  <sr-gallery [items]="companyItems"/>
+</section>
+
+<section>
+  <div class="heading">
+    <h1>Focus sulla <span class="gradient buzzword">sostenibilità</span></h1>
+    <p>Leonardo sta definendo iniziative per affrontare le sfide attuali e promuovere una <strong>crescita sostenibile</strong>, seguendo una strategia che integra la sostenibilità lungo tutta la catena del valore, a partire dalla strategia aziendale.</p>
+    <p>Questo processo si fonda su un <strong>dialogo continuo con gli stakeholder</strong> e sulla definizione degli Obiettivi di Sostenibilità, dove innovazione, digitalizzazione e competenze sono fondamentali per la transizione sostenibile e per la protezione del pianeta e delle persone.</p>
+    <p>Gli obiettivi, allineati con le priorità emerse dall’analisi di materialità, coprono diverse dimensioni – governance, impegno climatico e ambientale, impatto sociale e digitalizzazione – e sono accompagnati da specifici <strong>target e KPI di monitoraggio</strong> per ciascun ambito.</p>
+  </div>
+</section>
+
+<div class="centered">
+  <a
+    aria-label="Download sustainability report"
+    class="pr-button"
+    href="report/report.pdf"
+    download="report/report.pdf"
+    title="Download sustainability report"
+  >
+    Scarica il report
+  </a>
+</div>
+
+<div class="centered">
+  <sr-footer />
+</div>

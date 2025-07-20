@@ -1,0 +1,28 @@
+@use 'borders';
+@use 'colors';
+@use 'fonts';
+@use 'spaces';
+
+:host {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: colors.$cherry;
+  padding: spaces.$padding-xlarge 0;
+  border-radius: borders.$radius-default borders.$radius-default 0 0;
+  font: fonts.$body-small-bold-mobile;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
+
+// Large screens
+@media (min-width: spaces.$desktop-bp) {
+  :host {
+    font: fonts.$body-small-bold-desktop;
+  }
+}

@@ -1,0 +1,61 @@
+@use 'borders';
+@use 'colors';
+@use 'fonts';
+@use 'spaces';
+
+button.pr-icon-button {
+  border-radius: borders.$radius-circle;
+  border: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: spaces.$padding-small;
+  cursor: pointer;
+  background-color: colors.$grey;
+
+  fa-icon {
+    color: colors.$dark-grey;
+  }
+
+  &:hover {
+    background-color: colors.$grey-hover;
+  }
+
+  &:active {
+    background-color: colors.$grey-active;
+  }
+
+  &:focus-visible {
+    outline-offset: borders.$outline-offset;
+    outline: colors.$outline solid borders.$width-focus;
+  }
+}
+
+button, a {
+  &.pr-button {
+    border-radius: borders.$radius-default;
+    border: none;
+    padding: spaces.$padding-small spaces.$padding-large;
+    background-color: colors.$wine;
+    cursor: pointer;
+    font: fonts.$button;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      background-color: colors.$wine-hover;
+    }
+
+    &:active {
+      background-color: colors.$wine-active;
+    }
+
+    &:focus-visible {
+      outline-offset: borders.$outline-offset;
+      outline: colors.$outline solid borders.$width-focus;
+    }
+  }
+}
