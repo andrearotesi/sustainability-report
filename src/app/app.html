@@ -6,6 +6,15 @@
   </ng-container>
 </sr-card>
 
+<h4>Carousel</h4>
+<sr-carousel>
+  @for (i of [0, 1, 2, 3, 4, 5, 6]; track i) {
+    <sr-card carousel-item>
+      <span card-title>{{ i }}</span>
+    </sr-card>
+  }
+</sr-carousel>
+
 <button class="pr-button">
   <span>Button label</span>
 </button>

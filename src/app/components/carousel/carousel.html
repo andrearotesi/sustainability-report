@@ -1,0 +1,10 @@
+<div class="items-container" #itemsContainer>
+  <div class="items">
+    <ng-content select="[carousel-item]" />
+  </div>
+</div>
+
+<div class="actions-container">
+  <button class="action" (click)="scrollByItem('left')"> &lt; </button>
+  <button class="action" (click)="scrollByItem('right')"> &gt; </button>
+</div>
