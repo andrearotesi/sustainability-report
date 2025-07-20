@@ -1,0 +1,26 @@
+@use 'colors';
+@use 'fonts';
+@use 'borders';
+@use 'spaces';
+
+button.pr-button {
+  border-radius: borders.$radius-default;
+  border: none;
+  padding: spaces.$padding-small spaces.$padding-large;
+  background-color: colors.$teal;
+  cursor: pointer;
+  font: fonts.$button;
+
+  &:hover {
+    background-color: colors.$teal-hover;
+  }
+
+  &:active {
+    background-color: colors.$teal-active;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline: black solid 2px;
+  }
+}

@@ -1,0 +1,36 @@
+@use 'colors';
+@use 'fonts';
+@use 'borders';
+@use 'spaces';
+
+:host {
+  border-radius: borders.$radius-large;
+  cursor: default;
+  height: 480px; // TODO ensure this is ok
+  width: 260px; // TODO ensure this is ok
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .internal-padding {
+    padding: 1.5rem; // TODO token for paddings
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  // Input-based CSS rules
+  &.half-size {
+    height: 100px;
+  }
+
+  &.teal {
+    background-color: colors.$teal;
+  }
+
+  &.liliac {
+    background-color: colors.$liliac;
+  }
+
+}

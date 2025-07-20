@@ -1,0 +1,11 @@
+@use 'fonts';
+
+sr-card {
+  [card-subtitle] {
+    font: fonts.$body-small-bold;
+  }
+
+  [card-title] {
+    font: fonts.$heading-medium;
+  }
+}
