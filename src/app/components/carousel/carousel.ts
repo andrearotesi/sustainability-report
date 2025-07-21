@@ -7,12 +7,13 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
   styleUrl: './carousel.scss'
 })
 export class Carousel {
-  @ViewChild('itemsContainer', { static: true })
-  scrollContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild('itemsContainer', { static: true }) itemsContainer!: ElementRef<HTMLDivElement>;
 
-  // TODO improve, rename etc...
-  scrollByItem(direction: 'left' | 'right') {
-    const container = this.scrollContainer.nativeElement;
+  /**
+   * Scrolls the carousel in the given direction by the carousel item width.
+   */
+  scrollItems(direction: 'left' | 'right') {
+    const container = this.itemsContainer.nativeElement;
     const item = container.querySelector('[carousel-item]');
     if (!item) return;
 

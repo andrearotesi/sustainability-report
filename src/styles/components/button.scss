@@ -3,6 +3,8 @@
 @use 'borders';
 @use 'spaces';
 
+// TODO add pr-icon-button class
+
 button.pr-button {
   border-radius: borders.$radius-default;
   border: none;
