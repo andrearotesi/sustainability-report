@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Card} from './components/card/card';
+import {Card, CardImage} from './components/card/card';
 import {Carousel} from './components/carousel/carousel';
 import {Video} from './components/video/video';
 import {Divider} from './components/divider/divider';
@@ -12,4 +12,9 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App { }
+export class App {
+  imageConfig: CardImage = {
+    url: 'images/tree.png',
+    alt: 'A random tree',
+  };
+}

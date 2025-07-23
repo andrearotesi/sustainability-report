@@ -1,6 +1,6 @@
-import {Component, ElementRef, input, signal, ViewChild} from '@angular/core';
+import { Component, ElementRef, input, signal, ViewChild } from '@angular/core';
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
-import {FaIconComponent, IconDefinition} from '@fortawesome/angular-fontawesome';
+import { FaIconComponent, IconDefinition } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'sr-video',

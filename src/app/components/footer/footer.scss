@@ -9,12 +9,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: colors.$skyblue;
+  background-color: colors.$denim;
   padding: spaces.$padding-xlarge 0;
   border-radius: borders.$radius-large borders.$radius-large 0 0;
   font: fonts.$body-small-bold;
+  color: white;
 
   a {
-    color: black;
+    color: white;
   }
 }

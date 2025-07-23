@@ -8,6 +8,7 @@
   cursor: default;
   height: 480px; // TODO ensure this is ok
   width: 260px; // TODO ensure this is ok
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -18,6 +19,10 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+  }
+
+  img {
+    object-fit: cover;
   }
 
   // Input-based CSS rules

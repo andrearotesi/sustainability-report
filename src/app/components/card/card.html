@@ -6,3 +6,7 @@
 <div class="internal-padding">
   <ng-content select="[card-body]" />
 </div>
+
+@if (imageConfig(); as imageConfig) {
+  <img [src]="imageConfig.url" [alt]="imageConfig.alt">
+}

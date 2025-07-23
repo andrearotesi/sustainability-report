@@ -8,3 +8,5 @@
 - Remove unused css styles, only keep necessary stuff
 - Update the figma with the new components in a more detailed view
 - Use onPush change detection strategy
+- Check all tiny things: spacings...
+- Delete all useless stuff
