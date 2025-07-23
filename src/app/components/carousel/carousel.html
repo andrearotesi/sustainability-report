@@ -5,7 +5,9 @@
 </div>
 
 <div class="actions-container">
-  <!-- TODO use icon button component -->
-  <button class="action" (click)="scrollItems('left')"> &lt; </button>
-  <button class="action" (click)="scrollItems('right')"> &gt; </button>
+  @for (action of scrollAction; track $index) {
+    <button class="pr-icon-button" (click)="scrollItems(action.direction)">
+      <fa-icon [icon]="action.icon" />
+    </button>
+  }
 </div>

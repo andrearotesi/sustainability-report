@@ -3,7 +3,6 @@
 @use 'borders';
 @use 'spaces';
 
-// TODO add pr-icon-button class
 button.pr-icon-button {
   border-radius: borders.$radius-circle;
   border: none;
@@ -11,10 +10,13 @@ button.pr-icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.75rem;
+  width: 2rem;
+  padding: .5rem;
+  cursor: pointer;
+  background-color: colors.$grey;
 
-  i {
-    font-size: 1.5rem;
+  fa-icon {
+    color: colors.$dark-grey;
   }
 }
 

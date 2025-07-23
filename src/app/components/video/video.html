@@ -9,6 +9,7 @@
   type="video/mp4"
 ></video>
 
+<!-- TODO to all buttons, add aria label and that stuff for accessibility -->
 <button class="pr-icon-button" (click)="toggleVideo()">
-  <i class="material-symbols-outlined">{{ isPlaying() ? 'pause' : 'play_arrow' }}</i>
+  <fa-icon [icon]="toggleIcon()" />
 </button>
