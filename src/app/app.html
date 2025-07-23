@@ -1,26 +1,40 @@
-<sr-video url="videos/trees.mp4" />
+<div class="heading">
+  <h1>Per un futuro migliore.</h1>
+  <h2>Report sostenibilità {{ year }}</h2>
+</div>
 
-<sr-divider />
+<sr-video src="videos/trees.mp4" />
 
-<sr-card [imageConfig]="imageConfig">
-  <span card-subtitle>Riduzione emissioni CO2</span>
-  <span card-title>25%</span>
-  <ng-container card-body>
-    <h1>hello</h1>
-  </ng-container>
-</sr-card>
+<h1>Gli impatti principali</h1>
 
-<h4>Carousel</h4>
 <sr-carousel>
-  @for (i of [0, 1, 2, 3, 4, 5, 6]; track i) {
+  @for (item of reportItems; track $index) {
     <sr-card carousel-item>
-      <span card-title>{{ i }}</span>
+      <span card-title>{{ item.title }}</span>
+      <span card-subtitle>{{ item.subtitle }}</span>
     </sr-card>
   }
 </sr-carousel>
 
-<button class="pr-button">
-  <span>Button label</span>
-</button>
+<sr-divider />
+
+<div class="heading">
+  <h1 class="gradient company-name">Zucchetti Centro Sistemi S.p.a.</h1>
+  <span>Chi siamo, cosa facciamo</span>
+</div>
+
+<sr-carousel>
+  @for (item of companyItes; track $index) {
+    <sr-card carousel-item>
+      <span card-title>{{ item.title }}</span>
+      <span card-subtitle>{{ item.subtitle }}</span>
+    </sr-card>
+  }
+</sr-carousel>
+
+<h1>Perché ci importa della <span class="gradient buzzword">sostenibilità</span></h1>
+<p>Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque bibendum</strong> pretium ultrices. Nec aliquet lectus et. Proin eget nisi finibus, euismod nulla vel, <strong>rutrum</strong>.</p>
+
+<a class="pr-button" href="report/report.pdf" download="report/report.pdf">Scarica il report</a>
 
 <sr-footer />

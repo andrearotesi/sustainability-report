@@ -20,24 +20,28 @@ button.pr-icon-button {
   }
 }
 
-button.pr-button {
-  border-radius: borders.$radius-default;
-  border: none;
-  padding: spaces.$padding-small spaces.$padding-large;
-  background-color: colors.$teal;
-  cursor: pointer;
-  font: fonts.$button;
+button, a {
+  &.pr-button {
+    border-radius: borders.$radius-default;
+    border: none;
+    padding: spaces.$padding-small spaces.$padding-large;
+    background-color: colors.$teal;
+    cursor: pointer;
+    font: fonts.$button;
+    text-decoration: none;
+    color: black;
 
-  &:hover {
-    background-color: colors.$teal-hover;
-  }
+    &:hover {
+      background-color: colors.$teal-hover;
+    }
 
-  &:active {
-    background-color: colors.$teal-active;
-  }
+    &:active {
+      background-color: colors.$teal-active;
+    }
 
-  &:focus-visible {
-    outline-offset: 2px;
-    outline: black solid 2px;
+    &:focus-visible {
+      outline-offset: 2px;
+      outline: black solid 2px;
+    }
   }
 }

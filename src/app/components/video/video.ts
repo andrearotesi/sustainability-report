@@ -13,7 +13,7 @@ import { FaIconComponent, IconDefinition } from '@fortawesome/angular-fontawesom
 export class Video {
   @ViewChild('videoRef') videoRef!: ElementRef;
 
-  url = input.required<string>();
+  src = input.required<string>();
 
   protected readonly isPlaying = signal<boolean>(true);
   protected readonly toggleIcon = signal<IconDefinition>(faPause);

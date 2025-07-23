@@ -13,8 +13,17 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
   styleUrl: './app.scss'
 })
 export class App {
-  imageConfig: CardImage = {
-    url: 'images/tree.png',
-    alt: 'A random tree',
-  };
+  protected readonly year = new Date().getFullYear();
+  protected readonly reportItems = [
+    { title: 'tit', subtitle: 'sub' },
+    { title: 'tit', subtitle: 'sub' },
+    { title: 'tit', subtitle: 'sub' },
+    { title: 'tit', subtitle: 'sub' },
+  ];
+  protected readonly companyItes = [
+    { title: 'tit', subtitle: 'sub' },
+    { title: 'tit', subtitle: 'sub' },
+    { title: 'tit', subtitle: 'sub' },
+    { title: 'tit', subtitle: 'sub' },
+  ];
 }
