@@ -1,9 +1,10 @@
 # TODOs
-- Add video card component (takes in videoSrc & autoplay)
-- Add divider component (literally a horizontal line)
-- Add icon button component
-- Add footer component
+- ~~Add video card component (takes in videoSrc & autoplay)~~
+- ~~Add divider component (literally a horizontal line)~~
+- ~~Add icon button component~~
+- ~~Add footer component~~
 - Introduce image support into card component
 - Build the whole page with random text
 - Remove unused css styles, only keep necessary stuff
 - Update the figma with the new components in a more detailed view
+- Use onPush change detection strategy

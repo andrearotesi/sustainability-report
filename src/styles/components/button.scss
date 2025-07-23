@@ -4,6 +4,19 @@
 @use 'spaces';
 
 // TODO add pr-icon-button class
+button.pr-icon-button {
+  border-radius: borders.$radius-circle;
+  border: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+
+  i {
+    font-size: 1.5rem;
+  }
+}
 
 button.pr-button {
   border-radius: borders.$radius-default;

@@ -1,0 +1,9 @@
+@use 'borders';
+@use 'colors';
+@use 'spaces';
+
+:host {
+  width: 100%;
+  padding: spaces.$padding-large 0;
+  border-top: borders.$width-default solid colors.$grey;
+}

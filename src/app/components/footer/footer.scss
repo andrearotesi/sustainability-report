@@ -1,0 +1,20 @@
+// TODO order all of these alphabetically everywhere
+@use 'colors';
+@use 'borders';
+@use 'spaces';
+@use 'fonts';
+
+:host {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: colors.$skyblue;
+  padding: spaces.$padding-xlarge 0;
+  border-radius: borders.$radius-large borders.$radius-large 0 0;
+  font: fonts.$body-small-bold;
+
+  a {
+    color: black;
+  }
+}

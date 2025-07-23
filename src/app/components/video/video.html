@@ -1,0 +1,14 @@
+<video
+  #videoRef
+  (click)="toggleVideo()"
+  (keydown.enter)="toggleVideo()"
+  [src]="url()"
+  muted
+  autoplay
+  loop
+  type="video/mp4"
+></video>
+
+<button class="pr-icon-button" (click)="toggleVideo()">
+  <i class="material-symbols-outlined">{{ isPlaying() ? 'pause' : 'play_arrow' }}</i>
+</button>
