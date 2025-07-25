@@ -1,7 +1,7 @@
 @use 'borders';
 @use 'colors';
-@use 'spaces';
 @use 'sizes';
+@use 'spaces';
 
 :host {
   border-radius: borders.$radius-default;

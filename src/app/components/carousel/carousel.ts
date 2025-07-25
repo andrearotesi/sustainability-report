@@ -1,5 +1,5 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
-import {FaIconComponent, IconDefinition} from '@fortawesome/angular-fontawesome';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FaIconComponent, IconDefinition } from '@fortawesome/angular-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 enum ScrollDirectionEnum {
