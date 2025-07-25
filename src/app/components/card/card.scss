@@ -1,12 +1,12 @@
 @use 'borders';
 @use 'colors';
-@use 'fonts';
 @use 'spaces';
+@use 'sizes';
 
 :host {
-  border-radius: borders.$radius-large;
-  height: 400px; // TODO ensure this is ok
-  width: 240px; // TODO ensure this is ok
+  border-radius: borders.$radius-default;
+  height: sizes.$card-height-mobile;
+  width: sizes.$card-width-mobile;
   overflow: hidden;
 
   display: flex;
@@ -14,18 +14,14 @@
   justify-content: flex-start;
 
   .internal-padding {
-    padding: 1.5rem; // TODO token for paddings
+    padding: spaces.$padding-large;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: spaces.$padding-small;
   }
 
   img {
     object-fit: cover;
-  }
-
-  &.half-size {
-    height: 100px;
   }
 
   &.teal {
@@ -41,7 +37,7 @@
 // Large screens
 @media (min-width: spaces.$desktop-bp) {
   :host {
-    height: 500px;
-    width: 300px;
+    height: sizes.$card-height-desktop;
+    width: sizes.$card-width-desktop;
   }
 }

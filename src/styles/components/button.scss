@@ -12,7 +12,7 @@ button.pr-icon-button {
   align-items: center;
   width: 2rem;
   height: 2rem;
-  padding: .5rem;
+  padding: spaces.$padding-small;
   cursor: pointer;
   background-color: colors.$grey;
 
@@ -29,8 +29,8 @@ button.pr-icon-button {
   }
 
   &:focus-visible {
-    outline-offset: 2px;
-    outline: black solid 2px;
+    outline-offset: borders.$outline-offset;
+    outline: colors.$outline solid borders.$width-focus;
   }
 }
 
@@ -54,8 +54,8 @@ button, a {
     }
 
     &:focus-visible {
-      outline-offset: 2px;
-      outline: black solid 2px;
+      outline-offset: borders.$outline-offset;
+      outline: colors.$outline solid borders.$width-focus;
     }
   }
 }
