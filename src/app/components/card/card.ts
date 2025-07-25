@@ -1,8 +1,6 @@
 import {Component, HostBinding, input} from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
 
-type CardColor = 'teal' | 'liliac';
-type CardSize = 'full' | 'half';
+type CardColor = 'teal' | 'lilac';
 
 export interface CardImage {
   url: string;
@@ -17,11 +15,7 @@ export interface CardImage {
 })
 export class Card {
   readonly color = input<CardColor>('teal');
-  readonly size = input<CardSize>('full');
   readonly imageConfig = input<CardImage | undefined>();
 
   @HostBinding('class') get inputBasedClasses() { return this.color(); }
-
-  // TODO decide if and how to do this
-  @HostBinding('class.half-size') get sizeClass() { return this.size() === 'half'; }
 }
