@@ -1,6 +1,7 @@
 $bg: #f1f1ef;
 
 $teal: #6ae2ce;
+// TODO these are deprecated
 $teal-hover: lighten($teal, 5%);
 $teal-active: darken($teal, 5%);
 
@@ -11,7 +12,8 @@ $denim: #285aa2;
 $lilac: #989bff;
 
 $grey: #e8e8ed;
-$grey-hover: lighten($grey, 5%);
+// TODO these are deprecated
+$grey-hover: darken($grey, 2%);
 $grey-active: darken($grey, 5%);
 
 $medium-grey: #b0b0b0;

@@ -8,5 +8,5 @@
 </div>
 
 @if (imageConfig(); as imageConfig) {
-  <img [src]="imageConfig.url" [alt]="imageConfig.alt">
+  <img aria-label="Card image" title="Card image" [src]="imageConfig.url" [alt]="imageConfig.alt">
 }

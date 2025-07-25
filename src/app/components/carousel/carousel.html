@@ -6,7 +6,13 @@
 
 <div class="actions-container">
   @for (action of scrollAction; track $index) {
-    <button class="pr-icon-button" (click)="scrollItems(action.direction)">
+    <button
+      aria-label="Scroll carousel items"
+      class="pr-icon-button"
+      title="Scroll carousel items"
+      type="button"
+      (click)="scrollItems(action.direction)"
+    >
       <fa-icon [icon]="action.icon" />
     </button>
   }
