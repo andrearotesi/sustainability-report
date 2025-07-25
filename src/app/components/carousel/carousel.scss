@@ -15,12 +15,8 @@
       width: max-content;
       display: flex;
       align-items: center;
-      gap: 0.5rem; // TODO tokens
-
-      [carousel-item] {
-        flex: 0 0 auto;
-        scroll-snap-align: start;
-      }
+      gap: 1.5rem; // TODO tokens
+      padding: 1rem;
     }
   }
 

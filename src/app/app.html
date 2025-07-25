@@ -1,40 +1,58 @@
-<div class="heading">
-  <h1>Per un futuro migliore.</h1>
-  <h2>Report sostenibilità {{ year }}</h2>
-</div>
+<section>
+  <div class="heading main">
+    <h1>Per un futuro migliore.</h1>
+    <h2>Report sostenibilità {{ year }}</h2>
+  </div>
 
-<sr-video src="videos/trees.mp4" />
+  <div class="centered">
+    <sr-video src="videos/trees.mp4" />
+  </div>
+</section>
 
-<h1>Gli impatti principali</h1>
+<section class="carousel-section">
+  <div class="heading">
+    <h1>Gli impatti principali</h1>
+  </div>
 
-<sr-carousel>
-  @for (item of reportItems; track $index) {
-    <sr-card carousel-item>
-      <span card-title>{{ item.title }}</span>
-      <span card-subtitle>{{ item.subtitle }}</span>
-    </sr-card>
-  }
-</sr-carousel>
+  <sr-carousel>
+    @for (item of reportItems; track $index) {
+      <sr-card carousel-item>
+        <span card-title>{{ item.title }}</span>
+        <span card-subtitle>{{ item.subtitle }}</span>
+      </sr-card>
+    }
+  </sr-carousel>
+</section>
 
 <sr-divider />
 
-<div class="heading">
-  <h1 class="gradient company-name">Zucchetti Centro Sistemi S.p.a.</h1>
-  <span>Chi siamo, cosa facciamo</span>
+<section class="carousel-section">
+  <div class="heading">
+    <h1 class="gradient company-name">Zucchetti Centro Sistemi S.p.a.</h1>
+    <span>Chi siamo, cosa facciamo</span>
+  </div>
+
+  <sr-carousel>
+    @for (item of companyItes; track $index) {
+      <sr-card carousel-item>
+        <span card-title>{{ item.title }}</span>
+        <span card-subtitle>{{ item.subtitle }}</span>
+      </sr-card>
+    }
+  </sr-carousel>
+</section>
+
+<section>
+  <div class="heading">
+    <h1>Perché ci importa della <span class="gradient buzzword">sostenibilità</span></h1>
+    <p>Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque bibendum</strong> pretium ultrices. Nec aliquet lectus et. Proin eget nisi finibus, euismod nulla vel, <strong>rutrum</strong>.</p>
+  </div>
+
+  <div class="centered">
+    <a class="pr-button" href="report/report.pdf" download="report/report.pdf">Scarica il report</a>
+  </div>
+</section>
+
+<div class="centered">
+  <sr-footer />
 </div>
-
-<sr-carousel>
-  @for (item of companyItes; track $index) {
-    <sr-card carousel-item>
-      <span card-title>{{ item.title }}</span>
-      <span card-subtitle>{{ item.subtitle }}</span>
-    </sr-card>
-  }
-</sr-carousel>
-
-<h1>Perché ci importa della <span class="gradient buzzword">sostenibilità</span></h1>
-<p>Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque bibendum</strong> pretium ultrices. Nec aliquet lectus et. Proin eget nisi finibus, euismod nulla vel, <strong>rutrum</strong>.</p>
-
-<a class="pr-button" href="report/report.pdf" download="report/report.pdf">Scarica il report</a>
-
-<sr-footer />
