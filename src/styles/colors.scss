@@ -13,6 +13,8 @@ $denim: #285aa2;
 $liliac: #989bff;
 
 $grey: #e8e8ed;
+$grey-hover: lighten($grey, 5%);
+$grey-active: darken($grey, 5%);;
 $medium-grey: #b0b0b0;
 $dark-grey: #55524b;
 

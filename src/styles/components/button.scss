@@ -18,6 +18,19 @@ button.pr-icon-button {
   fa-icon {
     color: colors.$dark-grey;
   }
+
+  &:hover {
+    background-color: colors.$grey-hover;
+  }
+
+  &:active {
+    background-color: colors.$grey-active;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline: black solid 2px;
+  }
 }
 
 button, a {

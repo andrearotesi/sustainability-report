@@ -1,11 +1,23 @@
 @use 'fonts';
+@use 'spaces';
 
 sr-card {
   [card-subtitle] {
-    font: fonts.$body-small-bold;
+    font: fonts.$body-small-bold-mobile;
   }
 
   [card-title] {
-    font: fonts.$card-title;
+    font: fonts.$card-title-mobile;
+  }
+
+  // Large screens
+  @media (min-width: spaces.$desktop-bp) {
+    [card-subtitle] {
+      font: fonts.$body-small-bold-desktop;
+    }
+
+    [card-title] {
+      font: fonts.$card-title-desktop;
+    }
   }
 }

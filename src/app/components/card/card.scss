@@ -1,13 +1,12 @@
+@use 'borders';
 @use 'colors';
 @use 'fonts';
-@use 'borders';
 @use 'spaces';
 
 :host {
   border-radius: borders.$radius-large;
-  cursor: default;
   height: 400px; // TODO ensure this is ok
-  width: 220px; // TODO ensure this is ok
+  width: 240px; // TODO ensure this is ok
   overflow: hidden;
 
   display: flex;
@@ -25,7 +24,6 @@
     object-fit: cover;
   }
 
-  // Input-based CSS rules
   &.half-size {
     height: 100px;
   }
@@ -38,4 +36,12 @@
     background-color: colors.$liliac;
   }
 
+}
+
+// Large screens
+@media (min-width: spaces.$desktop-bp) {
+  :host {
+    height: 500px;
+    width: 300px;
+  }
 }

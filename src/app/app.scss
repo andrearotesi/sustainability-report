@@ -1,5 +1,6 @@
-@use 'fonts';
 @use 'colors';
+@use 'fonts';
+@use 'spaces';
 
 :host {
   display: flex;
@@ -50,5 +51,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+// Large screens
+@media (min-width: spaces.$desktop-bp) {
+  :host {
+    section {
+      padding: 2rem 3rem;
+
+      .heading {
+        &.main {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 5rem;
+          padding: 0 .5rem;
+        }
+      }
+
+      &.carousel-section {
+        .heading {
+          padding-left: 3rem;
+        }
+      }
+    }
   }
 }

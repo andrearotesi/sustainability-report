@@ -1,6 +1,5 @@
-// TODO order all of these alphabetically everywhere
-@use 'colors';
 @use 'borders';
+@use 'colors';
 @use 'spaces';
 @use 'fonts';
 
@@ -12,10 +11,18 @@
   background-color: colors.$denim;
   padding: spaces.$padding-xlarge 0;
   border-radius: borders.$radius-large borders.$radius-large 0 0;
-  font: fonts.$body-small-bold;
+  font: fonts.$body-small-bold-mobile;
   color: white;
 
   a {
     color: white;
+  }
+}
+
+
+// Large screens
+@media (min-width: spaces.$desktop-bp) {
+  :host {
+    font: fonts.$body-small-bold-desktop;
   }
 }
