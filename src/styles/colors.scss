@@ -1,9 +1,10 @@
+@use 'sass:color';
+
 $bg: #f1f1ef;
 
 $teal: #6ae2ce;
-// TODO these are deprecated
-$teal-hover: lighten($teal, 5%);
-$teal-active: darken($teal, 5%);
+$teal-hover: color.scale($teal, $lightness: 5%);
+$teal-active: color.adjust($teal, $lightness: -5%);
 
 // TODO once done with cards, remove unused colours
 $skyblue: #98c4ff;
@@ -12,9 +13,8 @@ $denim: #285aa2;
 $lilac: #989bff;
 
 $grey: #e8e8ed;
-// TODO these are deprecated
-$grey-hover: darken($grey, 2%);
-$grey-active: darken($grey, 5%);
+$grey-hover: color.adjust($grey, $lightness: -2%);
+$grey-active: color.adjust($grey, $lightness: -5%);
 
 $medium-grey: #b0b0b0;
 $dark-grey: #55524b;
