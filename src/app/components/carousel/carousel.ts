@@ -21,7 +21,7 @@ interface ScrollAction {
   styleUrl: './carousel.scss'
 })
 export class Carousel {
-  @ViewChild('itemsContainer', { static: true }) itemsContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef<HTMLDivElement>;
 
   readonly scrollAction: ScrollAction[] = [
     { icon: faAngleLeft, direction: ScrollDirectionEnum.Left },
@@ -32,7 +32,7 @@ export class Carousel {
    * Scrolls the carousel in the given direction by the carousel item width.
    */
   scrollItems(direction: ScrollDirectionEnum) {
-    const container = this.itemsContainer.nativeElement;
+    const container = this.scrollContainer.nativeElement;
     const item = container.querySelector('[carousel-item]');
     if (!item) return;
 

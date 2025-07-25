@@ -1,6 +1,6 @@
  sr-carousel {
    [carousel-item] {
-     flex: 0 0 auto;
+     list-style: none;
      scroll-snap-align: start;
    }
  }
