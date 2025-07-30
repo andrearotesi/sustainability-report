@@ -16,7 +16,11 @@
 
   <sr-carousel>
     @for (item of reportItems; track $index) {
-      <sr-card carousel-item [color]="item.color">
+      <sr-card
+        carousel-item
+        [color]="item.color"
+        [imageConfig]="{ url: item.image, alt: item.title }"
+      >
         <span card-title>{{ item.title }}</span>
         <span card-subtitle>{{ item.subtitle }}</span>
       </sr-card>

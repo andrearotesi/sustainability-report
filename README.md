@@ -1,6 +1,8 @@
 # TODOs
-- Update carousel not to use cards but images and rename it to gallery
-- Create images for bullet points in procreate and pass the SRCs to the carousel (rename it to gallery)
+- Create images for bullet points
+- Create images for company info points
+- Fix word break
+- Decrease card font - useless to have big text with images
 - Add meaningful content and once finalised, remove all unnecessary stuff
 - Order all alphabetically: imports, directives, attributes
 - Update the figma to match the UI
