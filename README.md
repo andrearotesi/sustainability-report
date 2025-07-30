@@ -1,8 +1,9 @@
 # TODOs
-- Remove card component, only use carousel and make that a ul/li of images. Just provide a list of SRCs to it and create the images in procreate
+- Update carousel not to use cards but images and rename it to gallery
+- Create images for bullet points in procreate and pass the SRCs to the carousel (rename it to gallery)
 - Add meaningful content and once finalised, remove all unnecessary stuff
 - Order all alphabetically: imports, directives, attributes
-- Update the figma with the new components in a more detailed view
+- Update the figma to match the UI
 
 Bullet points company (rispetto ad anno precedente):
 - Consumo totale di energia (GJ): -5.43%
