@@ -22,12 +22,11 @@ interface CardItems {
 export class App {
   protected readonly year = new Date().getFullYear();
   protected readonly reportItems: CardItems[] = [
-    { image: 'images/test.png', color: 'green', title: '-5,43%', subtitle: 'Consumo totale di energia (GJ)' },
-    { image: 'images/test.png', color: 'mint', title: '-10.58%', subtitle: 'Emissioni da combustibili non rinnovabili (Tonnellate CO2)' },
-    { image: 'images/test.png', color: 'skyblue', title: '110kW', subtitle: 'Capacità nuovi impianti' },
-    { image: 'images/test.png', color: 'azure', title: '>200k', subtitle: 'Euro donati' },
-    { image: 'images/test.png', color: 'lilac', title: '-14.58%', subtitle: 'Consumo diesel' },
-    { image: 'images/test.png', color: 'purple', title: '+19.38%', subtitle: 'Donne assunte' },
+    { image: 'images/energy.png', color: 'azure', title: '-5,43%', subtitle: 'Consumo totale di energia (GJ)' },
+    { image: 'images/emissions.png', color: 'green', title: '-10.58%', subtitle: 'Emissioni CO2' },
+    { image: 'images/solar.png', color: 'skyblue', title: '110kW', subtitle: 'Capacità nuovi impianti' },
+    { image: 'images/donations.png', color: 'pink', title: '>200k', subtitle: 'Euro donati' },
+    { image: 'images/diesel.png', color: 'lilac', title: '-14.58%', subtitle: 'Consumo diesel' },
   ];
   protected readonly companyItems: CardItems[] = [
     { image: 'images/test.png', color: 'hotpink', title: 'Robotics', subtitle: 'Progettazione, produzione e distribuzione robot' },

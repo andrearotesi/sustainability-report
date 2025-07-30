@@ -17,8 +17,6 @@
   cursor: default;
 
   .internal-padding {
-    // Ensures that text is on top of the image within the card limits
-    width: calc(sizes.$card-width-mobile - spaces.$padding-large);
     position: absolute;
 
     overflow-wrap: break-word;
