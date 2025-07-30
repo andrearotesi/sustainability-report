@@ -6,11 +6,15 @@ $teal: #6ae2ce;
 $teal-hover: color.scale($teal, $lightness: 5%);
 $teal-active: color.adjust($teal, $lightness: -5%);
 
-// TODO once done with cards, remove unused colours
-$skyblue: #98c4ff;
-$aqua: #63d0d8;
+$green: #90f88c;
+$mint: #8cf8d2;
+$skyblue: #8cedf8;
+$azure: #8cc0f8;
+$lilac: #8c97f8;
+$purple: #b08cf8;
+$pink: #c98cf8;
+$hotpink: #eb8cf8;
 $denim: #285aa2;
-$lilac: #989bff;
 
 $grey: #e8e8ed;
 $grey-hover: color.adjust($grey, $lightness: -2%);

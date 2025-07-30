@@ -16,7 +16,7 @@
 
   <sr-carousel>
     @for (item of reportItems; track $index) {
-      <sr-card carousel-item>
+      <sr-card carousel-item [color]="item.color">
         <span card-title>{{ item.title }}</span>
         <span card-subtitle>{{ item.subtitle }}</span>
       </sr-card>
@@ -33,8 +33,8 @@
   </div>
 
   <sr-carousel>
-    @for (item of companyItes; track $index) {
-      <sr-card carousel-item>
+    @for (item of companyItems; track $index) {
+      <sr-card carousel-item [color]="item.color">
         <span card-title>{{ item.title }}</span>
         <span card-subtitle>{{ item.subtitle }}</span>
       </sr-card>

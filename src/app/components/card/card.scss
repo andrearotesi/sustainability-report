@@ -24,12 +24,36 @@
     object-fit: cover;
   }
 
-  &.teal {
-    background-color: colors.$teal;
+  &.green {
+    background-color: colors.$green;
+  }
+
+  &.mint {
+    background-color: colors.$mint;
+  }
+
+  &.skyblue {
+    background-color: colors.$skyblue;
+  }
+
+  &.azure {
+    background-color: colors.$azure;
   }
 
   &.lilac {
     background-color: colors.$lilac;
+  }
+
+  &.purple {
+    background-color: colors.$purple;
+  }
+
+  &.pink {
+    background-color: colors.$pink;
+  }
+
+  &.hotpink {
+    background-color: colors.$hotpink;
   }
 
 }

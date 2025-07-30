@@ -1,6 +1,6 @@
 import {Component, HostBinding, input} from '@angular/core';
 
-type CardColor = 'teal' | 'lilac';
+export type CardColor = 'green' | 'mint' | 'skyblue' | 'azure' | 'lilac' | 'purple' | 'pink' | 'hotpink';
 
 export interface CardImage {
   url: string;
@@ -14,7 +14,7 @@ export interface CardImage {
   styleUrl: './card.scss'
 })
 export class Card {
-  readonly color = input<CardColor>('teal');
+  readonly color = input<CardColor>('green');
   readonly imageConfig = input<CardImage | undefined>();
 
   @HostBinding('class') get inputBasedClasses() { return this.color(); }
