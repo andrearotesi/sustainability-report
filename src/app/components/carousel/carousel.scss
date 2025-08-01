@@ -3,7 +3,7 @@
 :host {
   display: flex;
   flex-direction: column;
-  gap: spaces.$padding-medium;
+  gap: spaces.$gap-medium;
   overflow: hidden;
 
   .scroll-container {
@@ -16,7 +16,7 @@
     .items-container {
       align-items: stretch;
       display: flex;
-      gap: spaces.$padding-medium;
+      gap: spaces.$gap-medium;
       margin: 0;
       padding: 0 spaces.$padding-medium;
       width: fit-content;
@@ -28,6 +28,6 @@
     align-items: center;
     justify-content: flex-end;
     padding: 0 spaces.$padding-medium;
-    gap: spaces.$padding-small;
+    gap: spaces.$gap-small;
   }
 }

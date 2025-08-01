@@ -5,12 +5,12 @@
 :host {
   display: flex;
   flex-direction: column;
-  gap: spaces.$padding-large;
+  gap: spaces.$gap-large;
 
   section {
     display: flex;
     flex-direction: column;
-    gap: spaces.$padding-large;
+    gap: spaces.$gap-large;
     padding: spaces.$padding-medium spaces.$padding-large;
 
     .heading {
@@ -22,7 +22,7 @@
       .title-row {
         display: flex;
         align-items: center;
-        gap: spaces.$padding-small;
+        gap: spaces.$gap-small;
 
         fa-icon {
           color: colors.$denim;
@@ -78,7 +78,6 @@
           display: flex;
           align-items: flex-end;
           justify-content: space-between;
-          gap: spaces.$padding-xxlarge;
           padding: 0 spaces.$padding-small;
         }
       }
