@@ -47,7 +47,10 @@
 
   @for (item of companyItems; track $index) {
     <div class="heading">
-      <h2 class="gradient buzzword">{{ item.title }}</h2>
+      <div class="title-row">
+        <fa-icon [icon]="item.icon" />
+        <h2 class="gradient buzzword">{{ item.title }}</h2>
+      </div>
       <p>{{ item.subtitle }}</p>
     </div>
   }

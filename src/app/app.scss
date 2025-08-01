@@ -14,8 +14,19 @@
     padding: spaces.$padding-large;
 
     .heading {
+
       &.main {
         padding-left: spaces.$padding-xlarge;
+      }
+
+      .title-row {
+        display: flex;
+        align-items: center;
+        gap: spaces.$padding-small;
+
+        fa-icon {
+          color: colors.$denim;
+        }
       }
     }
 
