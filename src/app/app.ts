@@ -23,10 +23,11 @@ export class App {
   protected readonly year = new Date().getFullYear();
   protected readonly reportItems: CardItems[] = [
     { image: 'images/energy.png', color: 'azure', title: '-5,43%', subtitle: 'Consumo totale di energia (GJ)' },
-    { image: 'images/emissions.png', color: 'green', title: '-10.58%', subtitle: 'Emissioni CO2' },
-    { image: 'images/solar.png', color: 'skyblue', title: '110kW', subtitle: 'Capacità nuovi impianti' },
-    { image: 'images/donations.png', color: 'pink', title: '>200k', subtitle: 'Euro donati' },
+    { image: 'images/emissions.png', color: 'skyblue', title: '-10.58%', subtitle: 'Emissioni CO2' },
+    { image: 'images/solar.png', color: 'mint', title: '110kW', subtitle: 'Capacità nuovi impianti' },
+    { image: 'images/donations.png', color: 'pink', title: '>200k€', subtitle: 'In donazioni' },
     { image: 'images/diesel.png', color: 'lilac', title: '-14.58%', subtitle: 'Consumo diesel' },
+    { image: 'images/women.png', color: 'azure', title: '+19.38%', subtitle: 'Lavoratrici assunte' },
   ];
   protected readonly companyItems: CardItems[] = [
     { image: 'images/test.png', color: 'hotpink', title: 'Robotics', subtitle: 'Progettazione, produzione e distribuzione robot' },
