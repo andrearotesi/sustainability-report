@@ -9,6 +9,15 @@
   </div>
 </section>
 
+<section>
+  <div class="heading">
+    <h1>Perché ci importa della <span class="gradient buzzword">sostenibilità</span></h1>
+    <p>Innovazione tecnologica, responsabilità ambientale e valorizzazione del capitale umano sono alla base del nostro modello di crescita.</p>
+    <p>Affrontiamo le sfide dello sviluppo con una visione orientata alla qualità, al risparmio energetico e alla riduzione dell’impatto ambientale, favorendo un ambiente di lavoro sicuro e inclusivo.</p>
+    <p>Crediamo nella collaborazione con tutti gli stakeholder per generare valore duraturo, economico, sociale e ambientale.</p>
+  </div>
+</section>
+
 <section class="carousel-section">
   <div class="heading">
     <h1>Gli impatti principali</h1>
@@ -30,42 +39,31 @@
 
 <sr-divider />
 
-<section class="carousel-section">
+<section>
   <div class="heading">
-    <h1 class="gradient company-name">Zucchetti Centro Sistemi S.p.a.</h1>
+    <h1 class="gradient company-name">Zucchetti Centro Sistemi</h1>
     <p>Chi siamo, cosa facciamo</p>
   </div>
 
-  <sr-carousel>
-    @for (item of companyItems; track $index) {
-      <sr-card carousel-item [color]="item.color">
-        <span card-title>{{ item.title }}</span>
-        <span card-subtitle>{{ item.subtitle }}</span>
-      </sr-card>
-    }
-  </sr-carousel>
+  @for (item of companyItems; track $index) {
+    <div class="heading">
+      <h2 class="gradient buzzword">{{ item.title }}</h2>
+      <p>{{ item.subtitle }}</p>
+    </div>
+  }
 </section>
 
-<section>
-  <div class="heading">
-    <h1>Perché ci importa della <span class="gradient buzzword">sostenibilità</span></h1>
-    <p>Innovazione tecnologica, responsabilità ambientale e valorizzazione del capitale umano sono alla base del nostro modello di crescita.</p>
-    <p>Affrontiamo le sfide dello sviluppo con una visione orientata alla qualità, al risparmio energetico e alla riduzione dell’impatto ambientale, favorendo un ambiente di lavoro sicuro e inclusivo.</p>
-    <p>Crediamo nella collaborazione con tutti gli stakeholder per generare valore duraturo, economico, sociale e ambientale.</p>
-  </div>
-
-  <div class="centered">
-    <a
-      aria-label="Download sustainability report"
-      class="pr-button"
-      href="report/report.pdf"
-      download="report/report.pdf"
-      title="Download sustainability report"
-    >
-      Scarica il report
-    </a>
-  </div>
-</section>
+<div class="centered">
+  <a
+    aria-label="Download sustainability report"
+    class="pr-button"
+    href="report/report.pdf"
+    download="report/report.pdf"
+    title="Download sustainability report"
+  >
+    Scarica il report
+  </a>
+</div>
 
 <div class="centered">
   <sr-footer />

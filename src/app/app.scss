@@ -14,8 +14,6 @@
     padding: spaces.$padding-large;
 
     .heading {
-      margin-bottom: spaces.$padding-medium;
-
       &.main {
         padding-left: spaces.$padding-xlarge;
       }
@@ -25,7 +23,7 @@
       padding: 0;
 
       .heading {
-        padding-left: spaces.$padding-large;
+        padding: 0 spaces.$padding-large;
       }
     }
 
@@ -51,6 +49,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  sr-video {
+    margin-top: spaces.$padding-medium;
   }
 }
 
