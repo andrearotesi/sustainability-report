@@ -17,6 +17,7 @@
   cursor: default;
 
   .internal-padding {
+    width: -webkit-fill-available;
     position: absolute;
 
     overflow-wrap: break-word;
