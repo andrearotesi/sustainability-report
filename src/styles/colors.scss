@@ -10,9 +10,11 @@ $cherry: #770316;
 $grey: #e8e8ed;
 $grey-hover: color.adjust($grey, $lightness: -2%);
 $grey-active: color.adjust($grey, $lightness: -5%);
+$grey-disabled: color.adjust($grey, $lightness: 2%);
 
-$medium-grey: #b0b0b0;
-$dark-grey: #55524b;
+$medium-grey: #d1d1d1;
+$icon: #3a3a3a;
+$icon-disabled: color.adjust($icon, $lightness: 40%);
 $outline: #171717;
 
 $primary-gradient: linear-gradient(180deg, #a32234, #e10028);

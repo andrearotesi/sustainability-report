@@ -1,14 +1,21 @@
-<div class="scroll-container" #scrollContainer>
-  <div class="items-container">
+<div class="gallery" role="region" [attr.aria-label]="'Aria.Gallery' | translate" #gallery>
+  <div class="gallery__scroll" id="gallery-scroll" tabindex="0">
     @for (item of items(); track $index) {
-      <div class="gallery-item-container">
-        <img class="gallery-item mobile" [class.caption]="item.caption" [src]="item.mobileImageSrc" [alt]="item.alt" />
-        <img class="gallery-item desktop" [class.caption]="item.caption" [src]="item.desktopImageSrc" [alt]="item.alt" />
+      <div class="gallery__item">
+        @if (item.subtitle) {
+          <h2 class="gallery__subtitle">{{ item.subtitle | translate }}</h2>
+        }
+        @if (item.title) {
+          <h1 class="gallery__title">{{ item.title | translate }}</h1>
+        }
+
+        <img class="gallery__image gallery__image--mobile" [class.gallery__image--caption]="item.caption" [src]="item.mobileImageSrc" [alt]="item.alt" />
+        <img class="gallery__image gallery__image--desktop" [class.gallery__image--caption]="item.caption" [src]="item.desktopImageSrc" [alt]="item.alt" />
 
         @if (item.caption; as caption) {
-          <div class="caption-container">
-            <strong>{{ caption.title }}</strong>
-            <span>{{ caption.body }}</span>
+          <div class="gallery__caption">
+            <strong>{{ caption.title | translate }}</strong>
+            <span>{{ caption.body | translate }}</span>
           </div>
         }
       </div>
@@ -16,16 +23,25 @@
   </div>
 </div>
 
-<div class="actions-container">
-  @for (action of scrollActions; track $index) {
-    <button
-      aria-label="Scroll carousel items"
-      class="pr-icon-button"
-      title="Scroll carousel items"
-      type="button"
-      (click)="scrollItems(action.direction)"
-    >
-      <fa-icon [icon]="action.icon" />
-    </button>
-  }
+<div class="gallery__actions">
+  <button
+    [attr.aria-label]="'Aria.Scroll_left' | translate"
+    aria-controls="gallery-scroll"
+    class="pr-icon-button"
+    type="button"
+    [disabled]="!canScrollLeft()"
+    (click)="scrollItems(ScrollDirectionEnum.Left)"
+  >
+    <span class="material-icons">chevron_left</span>
+  </button>
+  <button
+    [attr.aria-label]="'Aria.Scroll_right' | translate"
+    aria-controls="gallery-scroll"
+    class="pr-icon-button"
+    type="button"
+    [disabled]="!canScrollRight()"
+    (click)="scrollItems(ScrollDirectionEnum.Right)"
+  >
+    <span class="material-icons">chevron_right</span>
+  </button>
 </div>

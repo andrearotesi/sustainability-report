@@ -1,9 +1,20 @@
-<a
-  aria-label="Visit website creator's GitHub profile"
-  href="https://github.com/andrearotesi"
-  target="_blank"
-  title="Visit website creator's GitHub profile"
->
-  Andrea Rotesi
-</a>
-<span>, {{ year }}</span>
+<div class="row">
+  <a
+    href="https://github.com/andrearotesi"
+    target="_blank"
+    rel="noopener noreferrer"
+    [attr.aria-label]="'Aria.Gh' | translate"
+  >
+    Andrea Rotesi
+  </a>
+  <span>, {{ year }}</span>
+</div>
+
+<div class="row">
+  <span class="material-icons">language</span>
+  <select [formControl]="langControl" class="sr-select" [attr.aria-label]="'Aria.Language' | translate">
+    @for (lang of langOptions; track lang) {
+      <option [value]="lang">{{ 'Languages.' + lang | translate }}</option>
+    }
+  </select>
+</div>

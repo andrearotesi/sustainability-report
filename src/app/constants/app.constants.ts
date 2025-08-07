@@ -2,119 +2,134 @@ import { GalleryItem } from '../models/gallery.model';
 
 export const PERFORMANCE_GALLERY_ITEMS: GalleryItem[] = [
   {
-    mobileImageSrc: 'images/mobile/doctorate.png',
-    desktopImageSrc: 'images/desktop/doctorate.png',
-    alt: '170 borse di dottorato finanziate'
+    mobileImageSrc: 'images/mobile/doctorate.jpg',
+    desktopImageSrc: 'images/desktop/doctorate.jpg',
+    alt: 'Highlights.Doctorate_alt',
+    title: 'Highlights.Doctorate_title',
+    subtitle: 'Highlights.Doctorate_subtitle'
   },
   {
-    mobileImageSrc: 'images/mobile/emissions.png',
-    desktopImageSrc: 'images/desktop/emissions.png',
-    alt: '18.3% riduzione emissioni CO2'
+    mobileImageSrc: 'images/mobile/emissions.jpg',
+    desktopImageSrc: 'images/desktop/emissions.jpg',
+    alt: 'Highlights.Emissions_alt',
+    title: 'Highlights.Emissions_title',
+    subtitle: 'Highlights.Emissions_subtitle'
   },
   {
-    mobileImageSrc: 'images/mobile/employees.png',
-    desktopImageSrc: 'images/desktop/employees.png',
-    alt: '7434 nuove assunzioni'
+    mobileImageSrc: 'images/mobile/employees.jpg',
+    desktopImageSrc: 'images/desktop/employees.jpg',
+    alt: 'Highlights.Employees_alt',
+    title: 'Highlights.Employees_title',
+    subtitle: 'Highlights.Employees_subtitle'
   },
   {
-    mobileImageSrc: 'images/mobile/formation.png',
-    desktopImageSrc: 'images/desktop/formation.png',
-    alt: '1.4 milioni di ore di formazione erogate'
+    mobileImageSrc: 'images/mobile/training.jpg',
+    desktopImageSrc: 'images/desktop/training.jpg',
+    alt: 'Highlights.Training_alt',
+    title: 'Highlights.Training_title',
+    subtitle: 'Highlights.Training_subtitle'
   },
   {
-    mobileImageSrc: 'images/mobile/injuries.png',
-    desktopImageSrc: 'images/desktop/injuries.png',
-    alt: '16.5% riduzione infortuni sul lavoro'
+    mobileImageSrc: 'images/mobile/injuries.jpg',
+    desktopImageSrc: 'images/desktop/injuries.jpg',
+    alt: 'Highlights.Injuries_alt',
+    title: 'Highlights.Injuries_title',
+    subtitle: 'Highlights.Injuries_subtitle'
   },
   {
-    mobileImageSrc: 'images/mobile/uni.png',
-    desktopImageSrc: 'images/desktop/uni.png',
-    alt: '90 collaborazioni con università'
+    mobileImageSrc: 'images/mobile/uni.jpg',
+    desktopImageSrc: 'images/desktop/uni.jpg',
+    alt: 'Highlights.Uni_alt',
+    title: 'Highlights.Uni_title',
+    subtitle: 'Highlights.Uni_subtitle'
   },
   {
-    mobileImageSrc: 'images/mobile/waste.png',
-    desktopImageSrc: 'images/desktop/waste.png',
-    alt: '15% riduzione rifiuti prodotti'
+    mobileImageSrc: 'images/mobile/waste.jpg',
+    desktopImageSrc: 'images/desktop/waste.jpg',
+    alt: 'Highlights.Waste_alt',
+    title: 'Highlights.Waste_title',
+    subtitle: 'Highlights.Waste_subtitle'
   },
   {
-    mobileImageSrc: 'images/mobile/water.png',
-    desktopImageSrc: 'images/desktop/water.png',
-    alt: '5.7% riduzione prelievi idrici'
+    mobileImageSrc: 'images/mobile/water.jpg',
+    desktopImageSrc: 'images/desktop/water.jpg',
+    alt: 'Highlights.Water_alt',
+    title: 'Highlights.Water_title',
+    subtitle: 'Highlights.Water_subtitle'
   }
 ];
 
 export const COMPANY_GALLERY_ITEMS: GalleryItem[] = [
   {
-    mobileImageSrc: 'images/mobile/aerostruct.png',
-    desktopImageSrc: 'images/desktop/aerostruct.png',
-    alt: 'Aerostrutture',
+    mobileImageSrc: 'images/mobile/aerostruct.jpg',
+    desktopImageSrc: 'images/desktop/aerostruct.jpg',
+    alt: 'Highlights.Aerostruct_alt',
     caption: {
-      title: 'Aerostrutture',
-      body: 'Progettazione e produzione di componenti strutturali in materiali compositi e metallici per velivoli civili e militari, all’interno di programmi aeronautici globali.'
+      title: 'Highlights.Aerostruct_title',
+      body: 'Highlights.Aerostruct_body'
     }
   },
   {
-    mobileImageSrc: 'images/mobile/automation.png',
-    desktopImageSrc: 'images/desktop/automation.png',
-    alt: 'Automazione',
+    mobileImageSrc: 'images/mobile/automation.jpg',
+    desktopImageSrc: 'images/desktop/automation.jpg',
+    alt: 'Highlights.Automation_alt',
     caption: {
-      title: 'Automazione',
-      body: 'Sviluppo di soluzioni per l’automazione industriale e la logistica, inclusi sistemi per la movimentazione di materiali e la gestione intelligente dei flussi.'
+      title: 'Highlights.Automation_title',
+      body: 'Highlights.Automation_body'
     }
   },
   {
-    mobileImageSrc: 'images/mobile/cyber.png',
-    desktopImageSrc: 'images/desktop/cyber.png',
-    alt: 'Cybersecurity',
+    mobileImageSrc: 'images/mobile/cyber.jpg',
+    desktopImageSrc: 'images/desktop/cyber.jpg',
+    alt: 'Highlights.Cyber_alt',
     caption: {
-      title: 'Cybersecurity',
-      body: 'Protezione di infrastrutture critiche, reti e dati attraverso piattaforme di sicurezza informatica, analisi delle minacce e tecnologie di resilienza digitale.'
+      title: 'Highlights.Cyber_title',
+      body: 'Highlights.Cyber_body'
     }
   },
   {
-    mobileImageSrc: 'images/mobile/drone.png',
-    desktopImageSrc: 'images/desktop/drone.png',
-    alt: 'Sistemi uncrewed',
+    mobileImageSrc: 'images/mobile/drone.jpg',
+    desktopImageSrc: 'images/desktop/drone.jpg',
+    alt: 'Highlights.Drone_alt',
     caption: {
-      title: 'Sistemi uncrewed',
-      body: 'Progettazione e integrazione di sistemi aerei senza pilota per missioni di sorveglianza, ricognizione, supporto tattico e operazioni autonome.'
+      title: 'Highlights.Drone_title',
+      body: 'Highlights.Drone_body'
     }
   },
   {
-    mobileImageSrc: 'images/mobile/electro.png',
-    desktopImageSrc: 'images/desktop/electro.png',
-    alt: 'Elettronica',
+    mobileImageSrc: 'images/mobile/electro.jpg',
+    desktopImageSrc: 'images/desktop/electro.jpg',
+    alt: 'Highlights.Electro_alt',
     caption: {
-      title: 'Elettronica per la difesa',
-      body: 'Realizzazione di sistemi elettronici avanzati per la gestione delle missioni, la difesa elettronica, il radar, le comunicazioni e la consapevolezza situazionale.'
+      title: 'Highlights.Electro_title',
+      body: 'Highlights.Electro_body'
     }
   },
   {
-    mobileImageSrc: 'images/mobile/heli.png',
-    desktopImageSrc: 'images/desktop/heli.png',
-    alt: 'Elicotteri',
+    mobileImageSrc: 'images/mobile/heli.jpg',
+    desktopImageSrc: 'images/desktop/heli.jpg',
+    alt: 'Highlights.Heli_alt',
     caption: {
-      title: 'Elicotteri',
-      body: 'Progettazione, costruzione e supporto di elicotteri leggeri, medi e pesanti destinati ad applicazioni civili, militari e di emergenza.'
+      title: 'Highlights.Heli_title',
+      body: 'Highlights.Heli_body'
     }
   },
   {
-    mobileImageSrc: 'images/mobile/jet.png',
-    desktopImageSrc: 'images/desktop/jet.png',
-    alt: 'Velivoli',
+    mobileImageSrc: 'images/mobile/jet.jpg',
+    desktopImageSrc: 'images/desktop/jet.jpg',
+    alt: 'Highlights.Jet_alt',
     caption: {
-      title: 'Velivoli',
-      body: 'Sviluppo e produzione di aerei per l’addestramento, la sorveglianza e la difesa, con competenze in programmi internazionali e tecnologie di nuova generazione.'
+      title: 'Highlights.Jet_title',
+      body: 'Highlights.Jet_body'
     }
   },
   {
-    mobileImageSrc: 'images/mobile/space.png',
-    desktopImageSrc: 'images/desktop/space.png',
-    alt: 'Spazio',
+    mobileImageSrc: 'images/mobile/space.jpg',
+    desktopImageSrc: 'images/desktop/space.jpg',
+    alt: 'Highlights.Space_alt',
     caption: {
-      title: 'Spazio',
-      body: 'Partecipazione a programmi spaziali per l’osservazione della Terra, le telecomunicazioni, la navigazione e l’esplorazione, con capacità nei sistemi orbitali e di bordo.'
+      title: 'Highlights.Space_title',
+      body: 'Highlights.Space_body'
     }
   }
 ];
-

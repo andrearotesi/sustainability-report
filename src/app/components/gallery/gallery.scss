@@ -9,102 +9,129 @@
   gap: spaces.$gap-medium;
   overflow: hidden;
 
-  .scroll-container {
+  .gallery {
     display: grid;
     overflow-x: scroll;
     scroll-padding: spaces.$padding-medium;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 
-    .items-container {
+    &__scroll {
       align-items: stretch;
       display: flex;
       gap: spaces.$gap-medium;
       margin: 0;
       padding: 0 spaces.$padding-medium;
       width: fit-content;
+    }
 
-      .gallery-item-container {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: spaces.$gap-medium;
-        width: sizes.$card-width-mobile;
-        scroll-snap-align: start;
+    &__item {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: spaces.$gap-medium;
+      width: sizes.$card-width-mobile;
+      scroll-snap-align: start;
+    }
 
-        .gallery-item {
-          height: sizes.$card-height-mobile;
-          width: sizes.$card-width-mobile;
-          object-fit: contain;
-          list-style: none;
-          border-radius: borders.$radius-default;
+    &__subtitle {
+      position: absolute;
+      left: 20px;
+      top: 12px;
+      color: white;
+      font: fonts.$card-subtitle-mobile;
+    }
 
-          &.mobile {
-            display: block;
-          }
+    &__title {
+      position: absolute;
+      left: 20px;
+      top: 22px;
+      color: white;
+      font: fonts.$card-title-mobile;
+    }
 
-          &.desktop {
-            display: none;
-          }
+    &__image {
+      height: sizes.$card-height-mobile;
+      width: sizes.$card-width-mobile;
+      object-fit: contain;
+      list-style: none;
+      border-radius: borders.$radius-default;
 
-          &.caption {
-            height: sizes.$card-caption-height-mobile;
-            object-fit: cover;
-          }
-        }
+      &--mobile {
+        display: block;
+      }
 
-        .caption-container {
-          display: flex;
-          flex-direction: column;
+      &--desktop {
+        display: none;
+      }
 
-          span {
-            font: fonts.$body-small-mobile;
-          }
-        }
+      &--caption {
+        height: sizes.$card-caption-height-mobile;
+        object-fit: cover;
       }
     }
-  }
 
-  .actions-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 spaces.$padding-medium;
-    gap: spaces.$gap-small;
+    &__caption {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font: fonts.$body-small-mobile;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 spaces.$padding-medium;
+      gap: spaces.$gap-small;
+    }
   }
 }
 
 // Large screens
 @media (min-width: spaces.$desktop-bp) {
   :host {
-    .scroll-container {
-      .items-container {
-        .gallery-item-container {
-          width: sizes.$card-width-desktop;
+    .gallery {
+      &__item {
+        width: sizes.$card-width-desktop;
+      }
 
-          .gallery-item {
-            height: sizes.$card-height-desktop;
-            width: sizes.$card-width-desktop;
+      &__subtitle {
+        left: 24px;
+        top: 20px;
+        font: fonts.$card-subtitle-desktop;
+      }
 
-            &.mobile {
-              display: none;
-            }
+      &__title {
+        left: 24px;
+        top: 40px;
+        font: fonts.$card-title-desktop;
+      }
 
-            &.desktop {
-              display: block;
-            }
+      &__image {
+        height: sizes.$card-height-desktop;
+        width: sizes.$card-width-desktop;
 
-            &.caption {
-              height: sizes.$card-caption-height-desktop;
-              object-fit: cover;
-            }
-          }
+        &--mobile {
+          display: none;
+        }
 
-          .caption-container {
-            span {
-              font: fonts.$body-small-desktop;
-            }
-          }
+        &--desktop {
+          display: block;
+        }
+
+        &--caption {
+          height: sizes.$card-caption-height-desktop;
+          object-fit: cover;
+        }
+      }
+
+      &__caption {
+        span {
+          font: fonts.$body-small-desktop;
         }
       }
     }

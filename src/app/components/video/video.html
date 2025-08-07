@@ -2,22 +2,23 @@
   #videoRef
   (click)="toggleVideo()"
   (keydown.enter)="toggleVideo()"
+  (keydown.space)="toggleVideo()"
   [src]="src()"
+  [attr.aria-label]="'Aria.Video' | translate"
   autoplay
   muted
   loop
   type="video/mp4"
-  aria-label="Video"
-  title="Video"
   playsInline
+  tabindex="0"
 ></video>
 
 <button
-  aria-label="Play/pause video"
+  [attr.aria-label]="isPlaying() ? 'Aria.Pause' : 'Aria.Play' | translate"
+  [attr.aria-pressed]="isPlaying() ? 'true' : 'false'"
   class="pr-icon-button"
-  title="Play/pause video"
   type="button"
   (click)="toggleVideo()"
 >
-  <fa-icon [icon]="toggleIcon()" />
+  <span class="material-icons">{{ toggleIcon() }}</span>
 </button>

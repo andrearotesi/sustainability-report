@@ -1,32 +1,58 @@
-import  {Component, ElementRef, input, ViewChild } from '@angular/core';
-import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import {GalleryItem, ScrollAction, ScrollDirectionEnum} from '../../models/gallery.model';
+import { AfterViewInit, Component, ElementRef, input, OnDestroy, OnInit, signal, ViewChild } from '@angular/core';
+import { GalleryItem, ScrollDirectionEnum } from '../../models/gallery.model';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'sr-gallery',
-  imports: [
-    FaIconComponent
-  ],
   templateUrl: './gallery.html',
+  imports: [
+    TranslatePipe
+  ],
   styleUrl: './gallery.scss'
 })
-export class Gallery {
-  @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef<HTMLDivElement>;
+export class Gallery implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('gallery', { static: true }) gallery!: ElementRef<HTMLDivElement>;
 
   readonly items = input.required<GalleryItem[]>();
 
-  readonly scrollActions: ScrollAction[] = [
-    { icon: faAngleLeft, direction: ScrollDirectionEnum.Left },
-    { icon: faAngleRight, direction: ScrollDirectionEnum.Right },
-  ];
+  protected readonly ScrollDirectionEnum = ScrollDirectionEnum;
+
+  private autoScrollIntervalId?: number;
+  private scrollDirection: ScrollDirectionEnum = ScrollDirectionEnum.Right;
+
+  canScrollLeft = signal<boolean>(false);
+  canScrollRight = signal<boolean>(true);
+
+  ngOnInit(): void {
+    this.startAutoScroll();
+  }
+
+  ngAfterViewInit(): void {
+    this.updateScrollButtons(); // Initial check
+    this.gallery.nativeElement.addEventListener('scroll', this.onScroll);
+  }
+
+  ngOnDestroy(): void {
+    this.stopAutoScroll();
+    this.gallery.nativeElement.removeEventListener('scroll', this.onScroll);
+  }
+
+  scrollItems(direction: ScrollDirectionEnum) {
+    this.stopAutoScroll();
+    this.performScroll(direction);
+  }
+
+  private onScroll = (): void => {
+    this.stopAutoScroll();
+    this.updateScrollButtons();
+  };
 
   /**
    * Scrolls the gallery in the given direction by the gallery item width.
    */
-  scrollItems(direction: ScrollDirectionEnum) {
-    const container = this.scrollContainer.nativeElement;
-    const item = container.querySelector('.gallery-item-container');
+  private performScroll(direction: ScrollDirectionEnum): void {
+    const container = this.gallery.nativeElement;
+    const item = container.querySelector('.gallery__item');
     if (!item) return;
 
     const itemWidth = (item as HTMLElement).offsetWidth;
@@ -34,5 +60,37 @@ export class Gallery {
       left: direction === ScrollDirectionEnum.Right ? itemWidth : -itemWidth,
       behavior: 'smooth',
     });
+  }
+
+  private updateScrollButtons(): void {
+    const container = this.gallery.nativeElement;
+    this.canScrollLeft.set(container.scrollLeft > 0);
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    this.canScrollRight.set(container.scrollLeft < maxScrollLeft);
+  }
+
+  /**
+   * Scrolls the items automatically every 10 seconds and reverses the scroll as soon as it gets to one end.
+   */
+  private startAutoScroll(): void {
+    this.autoScrollIntervalId = setInterval(() => {
+      const container = this.gallery.nativeElement;
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+      if (this.scrollDirection === ScrollDirectionEnum.Right && container.scrollLeft >= maxScrollLeft) {
+        this.scrollDirection = ScrollDirectionEnum.Left;
+      } else if (this.scrollDirection === ScrollDirectionEnum.Left && container.scrollLeft <= 0) {
+        this.scrollDirection = ScrollDirectionEnum.Right;
+      }
+
+      this.performScroll(this.scrollDirection);
+    }, 10000);
+  }
+
+  private stopAutoScroll(): void {
+    if (this.autoScrollIntervalId) {
+      clearInterval(this.autoScrollIntervalId);
+      this.autoScrollIntervalId = undefined;
+    }
   }
 }

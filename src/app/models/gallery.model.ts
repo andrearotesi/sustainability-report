@@ -1,9 +1,9 @@
-import { IconDefinition } from '@fortawesome/angular-fontawesome';
-
 export interface GalleryItem {
   mobileImageSrc: string;
   desktopImageSrc: string;
   alt: string;
+  title?: string;
+  subtitle?: string;
   caption?: {
     title: string;
     body: string;
@@ -13,9 +13,4 @@ export interface GalleryItem {
 export enum ScrollDirectionEnum {
   Left = 'LEFT',
   Right = 'RIGHT'
-}
-
-export interface ScrollAction {
-  icon: IconDefinition;
-  direction: ScrollDirectionEnum;
 }

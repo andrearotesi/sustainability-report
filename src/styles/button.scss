@@ -14,10 +14,10 @@ button.pr-icon-button {
   height: 32px;
   padding: spaces.$padding-small;
   cursor: pointer;
-  background-color: colors.$grey;
+  background-color: colors.$medium-grey;
 
-  fa-icon {
-    color: colors.$dark-grey;
+  .material-icons {
+    color: colors.$icon;
   }
 
   &:hover {
@@ -31,6 +31,15 @@ button.pr-icon-button {
   &:focus-visible {
     outline-offset: borders.$outline-offset;
     outline: colors.$outline solid borders.$width-focus;
+  }
+
+  &:disabled {
+    background-color: colors.$grey-disabled;
+    cursor: not-allowed;
+
+    .material-icons {
+      color: colors.$icon-disabled;
+    }
   }
 }
 

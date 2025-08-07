@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /sustainability-report/",
+    "build": "ng build --output-path docs --base-href /sustainability-report/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -23,9 +23,11 @@
     "@angular/common": "^20.1.0",
     "@angular/compiler": "^20.1.0",
     "@angular/core": "^20.1.0",
+    "@angular/forms": "^20.1.6",
     "@angular/platform-browser": "^20.1.0",
-    "@fortawesome/angular-fontawesome": "^2.0.1",
-    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@ngx-translate/core": "^17.0.0",
+    "@ngx-translate/http-loader": "^17.0.0",
+    "rxjs": "^7.8.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

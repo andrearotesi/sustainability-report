@@ -15,9 +15,9 @@ Il sito web consente agli utenti di:
 
 ## 🛠️ Tecnologie Utilizzate
 
-- HTML5 / CSS3 / JavaScript
-- Angular
-- Figma / Procreate
+- **Linguaggi**: HTML5 / SASS / JavaScript
+- **Framework**: Angular
+- **Design**: Figma / Procreate / Final Cut Pro
 
 ## ⚖️ Disclaimer
 

@@ -8,40 +8,43 @@
   flex-direction: column;
   gap: spaces.$gap-large;
 
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: spaces.$gap-large;
-    padding: spaces.$padding-medium spaces.$padding-large;
+  .report {
+    &__section {
+      display: flex;
+      flex-direction: column;
+      gap: spaces.$gap-large;
+      padding: spaces.$padding-medium spaces.$padding-large;
 
-    .heading {
-      &.main {
+      &--gallery {
+        padding: 0;
+
+        .report__heading {
+          padding: 0 spaces.$padding-large;
+        }
+      }
+
+      &--intro {
+        .report__heading--main {
+          padding-left: spaces.$padding-xlarge;
+        }
+      }
+    }
+
+    &__heading {
+      &--main {
         padding-left: spaces.$padding-xlarge;
       }
     }
 
-    &.gallery-section {
-      padding: 0;
-
-      .heading {
-        padding: 0 spaces.$padding-large;
-      }
-    }
-
-    .gradient {
-      color: transparent;
-      background-clip: text;
-
-      &.buzzword {
-        background-image: colors.$primary-gradient;
-      }
+    &__buzzword {
+      color: colors.$wine;
     }
 
     p {
       margin-top: spaces.$padding-small;
     }
 
-    .collage-parent {
+    &__collage {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -50,37 +53,45 @@
         border-radius: borders.$radius-default;
       }
     }
-  }
 
-  .centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    &__centered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  sr-video {
-    margin-top: spaces.$padding-medium;
+      &:has(sr-footer) {
+        padding-top: spaces.$padding-xlarge;
+      }
+    }
+
+    sr-video {
+      margin-top: spaces.$padding-medium;
+    }
   }
 }
 
 // Large screens
 @media (min-width: spaces.$desktop-bp) {
   :host {
-    section {
-      padding: spaces.$padding-xlarge spaces.$padding-xxlarge;
+    .report {
+      &__section {
+        padding: spaces.$padding-xlarge spaces.$padding-xxlarge;
 
-      .heading {
-        &.main {
+        &--gallery {
+          padding: 0;
+
+          .report__heading {
+            padding-left: spaces.$padding-xxlarge;
+          }
+        }
+      }
+
+      &__heading {
+        &--main {
           display: flex;
           align-items: flex-end;
           justify-content: space-between;
           padding: 0 spaces.$padding-small;
-        }
-      }
-
-      &.gallery-section {
-        .heading {
-          padding-left: spaces.$padding-xxlarge;
         }
       }
     }

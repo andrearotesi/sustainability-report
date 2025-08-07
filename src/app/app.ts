@@ -7,10 +7,11 @@ import {
   COMPANY_GALLERY_ITEMS,
   PERFORMANCE_GALLERY_ITEMS
 } from './constants/app.constants';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [Gallery, Video, Divider, Footer],
+  imports: [Gallery, Video, Divider, Footer, TranslatePipe],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

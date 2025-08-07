@@ -4,15 +4,26 @@
 @use 'spaces';
 
 :host {
-  width: 95%;
+  width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: spaces.$gap-medium;
   align-items: center;
   background-color: colors.$cherry;
-  padding: spaces.$padding-xlarge 0;
+  padding: spaces.$padding-xlarge;
   border-radius: borders.$radius-default borders.$radius-default 0 0;
   font: fonts.$body-small-bold-mobile;
   color: white;
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    &:has(select) {
+      gap: spaces.$gap-small;
+    }
+  }
 
   a {
     color: white;
@@ -24,5 +35,6 @@
 @media (min-width: spaces.$desktop-bp) {
   :host {
     font: fonts.$body-small-bold-desktop;
+    flex-direction: row;
   }
 }

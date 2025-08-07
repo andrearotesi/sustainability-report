@@ -1,0 +1,35 @@
+@use 'borders';
+@use 'colors';
+@use 'fonts';
+@use 'spaces';
+
+select.sr-select {
+  min-width: 150px;
+  padding: spaces.$padding-xsmall;
+  background: colors.$bg;
+  border-radius: borders.$radius-default;
+  border: none;
+  font: fonts.$body-small-mobile;
+  cursor: pointer;
+
+  &:hover {
+    background: colors.$grey-hover;
+  }
+
+  &:active {
+    background: colors.$grey-active;
+  }
+
+  &:focus-visible {
+    outline-offset: borders.$outline-offset;
+    outline: colors.$outline solid borders.$width-focus;
+  }
+}
+
+
+// Large screens
+@media (min-width: spaces.$desktop-bp) {
+  select.sr-select {
+    font: fonts.$body-small-desktop;
+  }
+}
