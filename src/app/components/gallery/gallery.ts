@@ -20,15 +20,15 @@ export class Gallery implements OnInit, AfterViewInit, OnDestroy {
   private autoScrollIntervalId?: number;
   private scrollDirection: ScrollDirectionEnum = ScrollDirectionEnum.Right;
 
-  canScrollLeft = signal<boolean>(false);
-  canScrollRight = signal<boolean>(true);
+  readonly canScrollLeft = signal<boolean>(false);
+  readonly canScrollRight = signal<boolean>(true);
 
   ngOnInit(): void {
     this.startAutoScroll();
   }
 
   ngAfterViewInit(): void {
-    this.updateScrollButtons(); // Initial check
+    this.updateScrollButtons();
     this.gallery.nativeElement.addEventListener('scroll', this.onScroll);
   }
 

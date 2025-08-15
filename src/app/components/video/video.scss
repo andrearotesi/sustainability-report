@@ -27,7 +27,7 @@
 }
 
 // Large screens
-@media (min-width: spaces.$desktop-bp) {
+@media (min-width: sizes.$desktop-bp) {
   :host {
     height: sizes.$video-height-desktop;
   }
