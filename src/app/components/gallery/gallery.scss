@@ -92,7 +92,7 @@
 }
 
 // Large screens
-@media (min-width: spaces.$desktop-bp) {
+@media (min-width: sizes.$desktop-bp) {
   :host {
     .gallery {
       &__item {

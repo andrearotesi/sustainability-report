@@ -3,7 +3,7 @@
 $bg: #f1f1ef;
 
 $wine: #a32234;
-$wine-hover: color.scale($wine, $lightness: 5%);
+$wine-hover: color.adjust($wine, $lightness: 5%);
 $wine-active: color.adjust($wine, $lightness: -5%);
 $cherry: #770316;
 
@@ -16,5 +16,3 @@ $medium-grey: #d1d1d1;
 $icon: #3a3a3a;
 $icon-disabled: color.adjust($icon, $lightness: 40%);
 $outline: #171717;
-
-$primary-gradient: linear-gradient(180deg, #a32234, #e10028);

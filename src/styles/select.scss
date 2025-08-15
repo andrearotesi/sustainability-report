@@ -1,6 +1,7 @@
 @use 'borders';
 @use 'colors';
 @use 'fonts';
+@use 'sizes';
 @use 'spaces';
 
 select.sr-select {
@@ -28,7 +29,7 @@ select.sr-select {
 
 
 // Large screens
-@media (min-width: spaces.$desktop-bp) {
+@media (min-width: sizes.$desktop-bp) {
   select.sr-select {
     font: fonts.$body-small-desktop;
   }

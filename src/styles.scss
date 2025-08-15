@@ -2,6 +2,7 @@
 @use 'styles/colors';
 @use 'styles/fonts';
 @use 'styles/select';
+@use 'styles/sizes';
 @use 'styles/spaces';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -24,7 +25,7 @@ h2 {
 }
 
 // Large screens
-@media (min-width: spaces.$desktop-bp) {
+@media (min-width: sizes.$desktop-bp) {
   html, body {
     font: fonts.$body-desktop;
   }

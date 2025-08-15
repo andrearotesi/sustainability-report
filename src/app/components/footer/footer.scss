@@ -1,6 +1,7 @@
 @use 'borders';
 @use 'colors';
 @use 'fonts';
+@use 'sizes';
 @use 'spaces';
 
 :host {
@@ -32,7 +33,7 @@
 
 
 // Large screens
-@media (min-width: spaces.$desktop-bp) {
+@media (min-width: sizes.$desktop-bp) {
   :host {
     font: fonts.$body-small-bold-desktop;
     flex-direction: row;
